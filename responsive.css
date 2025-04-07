@@ -1,0 +1,222 @@
+/* Additional styles for service description sections */
+.service-detail {
+  padding: 100px 0;
+  background-color: var(--light-color);
+}
+
+.service-detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.service-detail-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.service-detail-image {
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  background-color: var(--primary-color);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.service-detail-list {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.service-detail-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.service-detail-list li::before {
+  content: '\f00c';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+/* Enhanced contact form styles */
+.form-control.error {
+  border-color: var(--error-color);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.form-message {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 0;
+  text-align: center;
+}
+
+.form-message.success {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: var(--success-color);
+  border: 1px solid var(--success-color);
+}
+
+.form-message.error {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: var(--error-color);
+  border: 1px solid var(--error-color);
+}
+
+/* Testimonials section */
+.testimonials {
+  padding: 100px 0;
+  background-color: white;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.testimonial-card {
+  background-color: var(--light-color);
+  padding: 30px;
+  border-radius: 0;
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '\f10d';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 2rem;
+  color: var(--accent-color);
+  opacity: 0.2;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.testimonial-content {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.testimonial-author-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
+  background-color: var(--primary-color);
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.testimonial-author-name {
+  font-weight: 600;
+}
+
+.testimonial-author-title {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 100px 0;
+  background-color: var(--light-color);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 0;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-question i {
+  transition: var(--transition);
+}
+
+.faq-answer {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+  padding: 0 20px 20px;
+  max-height: 1000px;
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  .service-detail-container {
+    flex-direction: column-reverse;
+  }
+  
+  .service-detail-image {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .contact-form {
+    padding: 20px 15px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}

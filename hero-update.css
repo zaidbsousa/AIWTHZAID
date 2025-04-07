@@ -1,0 +1,85 @@
+/* Updated Hero Section Styles */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url('../images/hero-robot-new.png') no-repeat center center;
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 62, 80, 0.85); /* Dark overlay to ensure text readability */
+  z-index: 0;
+}
+
+.hero-content {
+  z-index: 1;
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero h1 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-text {
+    max-width: 100%;
+    order: 2;
+  }
+  
+  .hero-image {
+    max-width: 80%;
+    margin: 0 auto;
+    order: 1;
+  }
+  
+  .hero-btns {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 120px 0 80px;
+  }
+  
+  .hero-image {
+    max-width: 100%;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
